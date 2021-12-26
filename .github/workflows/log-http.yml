@@ -10,4 +10,5 @@ jobs:
         run: |
           mkdir -p ./log
           echo '$(date +%F) inbound HTTP' >> ./log/http.log
-      - uses: zwaldowski/git-commit-action@v1
+      - name: commit updated log
+        uses: zwaldowski/git-commit-action@v1
