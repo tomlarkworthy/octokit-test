@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log workflow execution in log
-        run: echo '$(date +%F) inbound HTTP' >> ./log/http.log
+        run: |
+          mkdir -p ./log
+          echo '$(date +%F) inbound HTTP' >> ./log/http.log
       - uses: zwaldowski/git-commit-action@v1
