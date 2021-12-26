@@ -1,0 +1,11 @@
+name: Log External HTTP
+
+on:
+  repository_dispatch:
+jobs:
+  commit-timestamp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log workflow execution in log
+        run: echo '$(date +%F) inbound HTTP' >> ./log/http.log
+      - uses: zwaldowski/git-commit-action@v1
