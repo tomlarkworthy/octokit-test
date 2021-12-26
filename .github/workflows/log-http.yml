@@ -10,7 +10,7 @@ jobs:
       - name: Log workflow execution in log
         run: |
           mkdir -p ./log
-          echo '$(date +%F) inbound HTTP' >> ./log/http.log
+          echo "$(date +%F) inbound HTTP" >> ./log/http.log
       - name: Commit updated log
         run: |
           git config --global user.name 'Log External HTTP'
