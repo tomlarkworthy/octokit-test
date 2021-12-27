@@ -14,7 +14,7 @@ jobs:
       - name: Commit updated log
         run: |
           git config --global user.name 'Log External HTTP'
-          git config --global user.email 'robot@users.noreply.github.com'
+          git config --global user.email 'robot@webcode.run'
           git add ./log/http.log
           git commit -am "Log inbound HTTP"
           git push
